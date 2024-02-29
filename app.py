@@ -45,7 +45,7 @@ def home():
         data = {'title':form.title.data}
         response = requests.post("http://127.0.0.1:5000/api",json=data).json()
         for row in response:
-            movies.append(response[row]['Title'])
+            movies.append(response[row])
         return render_template('home.html',movies=movies,form=form)
     return render_template('home.html',form=form)
 
