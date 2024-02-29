@@ -6,3 +6,21 @@ To use the API, download the pickle file and run the python script to generate a
 
 ## Pickle Files
 [Pickle Files](http://tinyurl.com/pickledFiles)
+
+
+## API Reference
+
+#### Send a POST request to the local/hosted URL
+
+```
+  POST /api
+````
+
+Type of input for the API 
+
+| Parameter | Type     | Description                       |
+| :-------- | :------- | :-------------------------------- |
+| `title`      | `string` | Enter name of the movie|
+
+Processes the movie title and returns result in a json format.
+
