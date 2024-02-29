@@ -41,15 +41,25 @@
       </div>
     </div>
     <br>
-    <div class="row">
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
-            <ol style="color: white;">
-                {% for movie in movies %}
-                    <li>{{ movie }}</li>
-                {% endfor %}
-            </ol>
+    <br>
+    <h1 class="text-center">Recommendations</h1>
+    <br>
+    <div class="row text-center justify-content-center">
+    {% for movie in movies %}
+        <div class="col-md-2 text-center d-flex align-items-stretch">
+          <div class="card bg-dark" style="color: white;">
+            <div class="card-body">
+              <h5 class="card-title"> {{ movie['Title'] }} </h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ ', '.join(movie['Genre'].split(",")[:2][:-1]) + ', ' + movie['Genre'].split(",")[:2][-1] }}</h6>
+              <p class="card-subtitle mb-2 text-muted"><i>({{ movie['Release_Date'] }})</i></p>
+              <br>
+              <p class="card-text">{{ movie['Overview'] }}</p>
+              <p class="card-text"><strong>RATING -- {{ movie['Vote_Average'] }} / 10</strong></p>
+            </div>
+          </div>
         </div>
+        <br>
+        {% endfor %}
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
