@@ -18,7 +18,7 @@ Install dependencies and zipped pickle files from [link](http://tinyurl.com/pick
 
 Place the pickle files in model directory and then start the server
 
-```bash
+```
   export FLASK_DEBUG=1
   export FLASK_APP=app.py
   flask run
