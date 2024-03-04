@@ -10,16 +10,6 @@
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    min-height: 100vh;
-    place-items: center;
-    line-height: 1.6;
-    background: var(--clr-neutral-900);
-    font-family: sans-serif;
-    padding-right: 15em;
-}
-
 .card {
     color: var(--clr-neutral-100);
     background-image: url(https://media.contentapi.ea.com/content/dam/eacom/images/2020/09/ea-featured-image-ea-desktop-beta.jpg.adapt.crop191x100.1200w.jpg);
