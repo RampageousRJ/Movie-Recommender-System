@@ -154,8 +154,5 @@ cython_debug/
 # Virtual Environment
 virt
 
-# Pickle Files
-*.pkl
-
 # Ignore Docke for now
 Dockerfile
