@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+:root {
+    --btn-color: rgb(50, 154, 166)
+}
+
+body {
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    color: white;
+    font-size: 1.125rem;
+    font-family: "Madimi One", sans-serif;
+}
+
+p {
+    line-height: 1.5rem;
+    word-spacing: 0.15rem;
+    font-size: 1.3rem;
+}
+
+#main-title {
+    text-shadow:
+        0 0 10px rgba(50, 154, 166, 0.7),
+        0 0 20px rgba(50, 154, 166, 0.6),
+        0 0 30px rgba(50, 154, 166, 0.5);
+    ;
+}
+
+#home-btn {
+    margin-top: 1.3rem;
+    position: relative;
+    max-width: max-content;
+    padding: 0.6rem;
+    font-size: 1.45rem;
+    border-radius: 0.9rem;
+    border: 2px solid var(--btn-color);
+    overflow: hidden;
+    transition: color 500ms ease-in-out;
+    /* Adjust the transition time for the color */
+}
+
+#home-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: var(--btn-color);
+    transition: width 500ms ease-in-out;
+    z-index: -1;
+}
+
+#home-btn:hover::before {
+    width: 100%;
+}
+
+#home-btn:hover {
+    color: white;
+}
+
+#home-svg {
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow:
+        0 0 10px rgba(50, 154, 166, 0.7),
+        0 0 20px rgba(50, 154, 166, 0.6),
+        0 0 30px rgba(50, 154, 166, 0.5);
+    opacity: 0;
+    animation: arrive 2.8s ease-in-out forwards;
+}
+
+@keyframes arrive {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
