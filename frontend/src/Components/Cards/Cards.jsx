@@ -3,6 +3,7 @@ import './cards.css'
 import Card from '../Card/Card'
 import { useNavigate } from 'react-router-dom'
 import { FaSearch } from "react-icons/fa";
+import { motion } from 'framer-motion'
 
 const objs = [
     {
@@ -83,9 +84,15 @@ function Cards() {
                 </section>
                 <main id='cards' className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 place-items-center p-6'>
                     {objs.map((item, ind) => (
-                        <Card key={ind}
-                            item={item}
-                        />
+                        <motion.div
+                            initial={{ rotateY: -180, opacity: 0 }}
+                            animate={{ rotateY: 0, opacity: 1 }}
+                            transition={{ delay: ind*0.5 + 1.0 }}
+                        >
+                            <Card key={ind}
+                                item={item}
+                            />
+                        </motion.div>
                     )
                     )}
                 </main>
