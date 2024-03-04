@@ -30,5 +30,5 @@ def home():
         return render_template('home.html',movies=movies,form=form)
     return render_template('home.html',form=form)
 
-# if __name__=='__main__':
-#     app.run(debug=1)
+if __name__=='__main__':
+    app.run(debug=1)
