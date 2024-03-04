@@ -1,0 +1,14 @@
+#container {
+    background-color: #000000;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+    color: #ffffff;
+}
+
+#go-back-btn {
+    text-shadow:
+        0 0 10px rgba(50, 154, 166, 0.7),
+        0 0 20px rgba(50, 154, 166, 0.6),
+        0 0 30px rgba(50, 154, 166, 0.5);
+    ;
+    font-size: larger;
+}

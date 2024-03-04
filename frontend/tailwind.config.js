@@ -6,9 +6,8 @@ export default {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "hero-pattern": "url('https://images.pexels.com/photos/604684/pexels-photo-604684.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')",
-        "hero-pattern-2": "url('https://images.pexels.com/photos/2931286/pexels-photo-2931286.jpeg?auto=compress&cs=tinysrgb&w=600')",
+      boxShadow: {
+        'glow-1': "0 0 10px rgba(50, 154, 166, 0.7), 0 0 20px rgba(50, 154, 166, 0.6),0 0 30px rgba(50, 154, 166, 0.5);"
       }
     },
   },

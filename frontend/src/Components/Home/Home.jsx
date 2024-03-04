@@ -2,10 +2,20 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import './home.css'
 import svg from '../../../src/assets/undraw_search_app_oso2.svg'
+import { useNavigate } from 'react-router-dom'
+
 
 function Home() {
+
+    const navigate=useNavigate()
+
+    const handleClick=(e)=>{
+        e.preventDefault()
+        navigate("/movies")
+    }
+
     return (
-        < div className='flex gap-10 flex-col-reverse md:flex-row md:justify-around min-h-screen 
+        < div className='flex gap-10 flex-col-reverse lg:flex-row lg:justify-around min-h-screen 
         justify-center items-center text-center'>
             <section id='home-main' className='flex flex-col gap-4 justify-center max-w-screen-md px-3 '>
                 <motion.div
@@ -19,12 +29,14 @@ function Home() {
                     </article>
                 </motion.div>
                 <div className='btn-container'>
-                    <button className='' id='home-btn'>
+                    <button
+                        id='home-btn'
+                        onClick={handleClick}>
                         Get Started
                     </button>
                 </div>
             </section>
-            <section className=' w-64 md:w-96 h-auto' id='home-svg'>
+            <section className=' w-64 lg:w-96 h-auto' id='home-svg'>
                 <img src={svg} alt="svg" />
             </section>
         </div>
