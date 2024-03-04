@@ -151,7 +151,11 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-*.pkl
-
 # Virtual Environment
 virt
+
+# Pickle Files
+*.pkl
+
+# Ignore Docke for now
+Dockerfile
